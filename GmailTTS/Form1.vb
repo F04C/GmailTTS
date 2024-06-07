@@ -19,7 +19,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.TopMost = True
         AuthenticateGmail()
-        Timer1.Interval = 30000 ' Check for new emails every 30 seconds
+        Timer1.Interval = 300000 ' Check for new emails every 5 mins
         Timer1.Start()
     End Sub
 
