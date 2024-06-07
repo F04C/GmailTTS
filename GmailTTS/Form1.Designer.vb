@@ -32,11 +32,13 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.TextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.ForeColor = System.Drawing.Color.Gainsboro
+        Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(776, 215)
+        Me.TextBox1.Size = New System.Drawing.Size(800, 239)
         Me.TextBox1.TabIndex = 0
         '
         'Form1
@@ -46,6 +48,7 @@ Partial Class Form1
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(800, 239)
         Me.Controls.Add(Me.TextBox1)
+        Me.DoubleBuffered = True
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
