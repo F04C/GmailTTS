@@ -41,7 +41,7 @@ Partial Class Form1
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox1.Size = New System.Drawing.Size(800, 239)
+        Me.TextBox1.Size = New System.Drawing.Size(190, 259)
         Me.TextBox1.TabIndex = 0
         '
         'Form1
@@ -49,10 +49,11 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
-        Me.ClientSize = New System.Drawing.Size(800, 239)
+        Me.ClientSize = New System.Drawing.Size(190, 259)
         Me.Controls.Add(Me.TextBox1)
         Me.DoubleBuffered = True
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -62,8 +62,23 @@ Public Class Form1
                     TextBox1.AppendText(snippet & Environment.NewLine)
 
                     'TTS
-                    synthesizer.SpeakAsync(snippet)
+                    'synthesizer.SpeakAsync(snippet)
                 Next
+            End If
+        Catch ex As Google.GoogleApiException
+            If ex.Error.Code = 401 Then
+                ' Handle authentication error (e.g., token expired)
+                ' Attempt reauthentication and resume operations
+                AuthenticateGmail()
+                CheckForNewEmails() ' Retry the operation
+            ElseIf ex.Error.Code = 503 Then
+                ' Handle service unavailable error
+                ' Attempt to reconnect and resume operations
+                Task.Delay(TimeSpan.FromSeconds(5)).Wait()
+                CheckForNewEmails() ' Retry the operation
+            Else
+                ' Handle other errors
+                MessageBox.Show("Failed to check for new emails: " & ex.Message)
             End If
         Catch ex As Exception
             MessageBox.Show("Failed to check for new emails: " & ex.Message)
