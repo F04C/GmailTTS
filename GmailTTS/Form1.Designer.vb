@@ -34,10 +34,13 @@ Partial Class Form1
         '
         Me.TextBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer), CType(CType(17, Byte), Integer))
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.Gainsboro
         Me.TextBox1.Location = New System.Drawing.Point(0, 0)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox1.Size = New System.Drawing.Size(800, 239)
         Me.TextBox1.TabIndex = 0
         '
