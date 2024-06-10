@@ -91,3 +91,5 @@ Public Class Form1
         CheckForNewEmails()
     End Sub
 End Class
+
+'add a function where it will remove texts from the textbox during an update if it's been read
